@@ -1,0 +1,205 @@
+:root {
+    /* Primary */
+    --light-red: hsl(0, 100%, 67%);
+    --orangey-yellow: hsl(39, 100%, 56%);
+    --green-teal: hsl(166, 100%, 37%);
+    --cobalt-blue: hsl(234, 85%, 45%);
+
+    /* Gradients*/
+
+    --light-slate-blue: hsl(252, 100%, 67%);
+    --light-royal-blue: hsl(241, 81%, 54%);
+    --violet-blue: hsla(256, 72%, 46%, 1);
+    --persian-blue: hsla(241, 72%, 46%, 0);
+
+    /* Neutral */
+
+    --white: hsl(0, 0%, 100%);
+    --pale-blue: hsl(221, 100%, 96%);
+    --light-lavender: hsl(241, 100%, 89%);
+    --dark-gray-blue: hsl(224, 30%, 27%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+#challenge-container {
+    margin: 10% auto;
+    display: flex;
+    width: 600px;
+    border-radius: 30px;
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
+}
+
+@media (max-width:375px) {
+    #challenge-container {
+        margin: auto;
+        margin-bottom: 30px;
+        flex-direction: column;
+        width: auto;
+        border-bottom-left-radius: 30px;
+    }
+}
+
+#left-side {
+    width: 50%;
+    background-image: linear-gradient(var(--light-slate-blue), var(--light-royal-blue));
+    border-radius: 30px;
+    padding: 40px 25px;
+    text-align: center;
+}
+
+@media (max-width:375px) {
+    #left-side {
+        width: 100%;
+        border-radius: 0;
+        border-bottom-left-radius: 30px;
+        border-bottom-right-radius: 30px;
+    }
+}
+
+#left-side #result {
+    font-size: 20px;
+    color: var(--light-lavender);
+}
+
+#left-side #percent {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 30px auto;
+    border-radius: 50%;
+    background-image: linear-gradient(var(--violet-blue), var(--persian-blue));
+}
+
+#left-side #percent #percent-num {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#left-side #percent #percent-num #number {
+    font-size: 60px;
+    color: var(--white);
+}
+
+#left-side #percent #percent-num #hundered {
+    font-size: 14px;
+    color: var(--light-slate-blue);
+    font-weight: 700;
+}
+
+#left-side #great {
+    color: var(--white);
+    margin-bottom: 15px;
+}
+
+#left-side #paragraph {
+    font-size: 18px;
+    color: var(--light-lavender);
+}
+
+#right-side {
+    width: 50%;
+    padding: 40px 30px;
+}
+
+@media (max-width:375px) {
+    #right-side {
+        width: 100%;
+    }
+}
+
+
+#right-side #summary {
+    font-size: 20px;
+    color: var(--dark-gray-blue);
+    margin-bottom: 20px;
+}
+
+#right-side .summary-item {
+    border-radius: 7px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+}
+
+#right-side #summary-cont {
+    margin-bottom: 30px;
+}
+
+#right-side #reaction-item {
+    background-color: hsla(0, 100%, 67%, 0.1);
+}
+
+#right-side #memory-item {
+    background-color: hsla(39, 100%, 56%, 0.1);
+}
+
+#right-side #verbal-item {
+    background-color: hsla(166, 100%, 37%, 0.1);
+}
+
+#right-side #visual-item {
+    background-color: hsla(234, 85%, 45%, 0.1);
+}
+
+#right-side .summary-item .icones {
+    display: flex;
+    align-items: center;
+}
+
+#right-side .summary-item #reaction-label {
+    color: var(--light-red);
+}
+
+#right-side .summary-item #memory-label {
+    color: var(--orangey-yellow);
+}
+
+#right-side .summary-item #verbal-label {
+    color: var(--green-teal);
+}
+
+#right-side .summary-item #visual-label {
+    color: var(--cobalt-blue);
+}
+
+#right-side .summary-item .icones img {
+    margin-right: 10px;
+}
+
+#right-side a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: var(--white);
+    padding: 15px;
+    width: 100%;
+    border-radius: 30px;
+    background-color: var(--dark-gray-blue);
+}
+
+#right-side a:hover {
+    background-image: linear-gradient(var(--light-slate-blue), var(--violet-blue));
+}
+
+.attribution { 
+    font-size: 11px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
